@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>EOTB NC House District Finder</title>
+
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  />
+  <link rel="stylesheet" href="style.css"/>
+</head>
+
+<body>
+
+<header>
+  <div class="title">EOTB NC House District Finder</div>
+  <div class="sub">
+    Type an address to find your NC House district and precincts.
+  </div>
+</header>
+
+<div class="toolbar">
+  <input
+    id="addr"
+    type="text"
+    placeholder="Enter an address (e.g., 505 Tangle Dr, Jamestown, NC)"
+  />
+
+  <button id="go" type="button">Search</button>
+
+  <label class="toggle">
+    <input id="showPrec" type="checkbox"/>
+    Show precinct lines
+  </label>
+
+  <label class="toggle">
+    <input id="showLabels" type="checkbox" checked/>
+    Show district numbers
+  </label>
+</div>
+
+<div id="results" class="results" hidden></div>
+
+<div id="map"></div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
